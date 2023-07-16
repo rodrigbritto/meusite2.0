@@ -1,0 +1,317 @@
+<!DOCTYPE html>   
+  <html lang="pt-br">   
+  <head>   
+   <meta charset="UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />   
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+   <title>RWeb_DESIGNER</title>   
+   <link rel="stylesheet" href="style.css">  
+   <style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway');  
+ $defaultSeconds: 3s;  
+ body, html{  
+      margin: 0;  
+      padding: 0;  
+      font-family: 'Raleway', sans-serif;  
+      
+ }  
+ .flex-container { 
+        background-color: #222;
+        bottom: 0;
+        left: 0;
+      position: absolute;  
+      height: 100vh;  
+      width: 100%;  
+      display: -webkit-flex; /* Safari */  
+      display: flex;  
+      overflow: hidden;  
+      @media screen and (max-width: 768px) {  
+           flex-direction: column;  
+      }  
+ }  
+ .flex-title {  
+    
+      color: #f1f1f1;  
+      background-color: #000000;
+      position: relative;  
+      font-size: 6vw;  
+      margin: auto;  
+      text-align: center;  
+      transform: rotate(90deg);  
+      top: 15%;  
+      -webkit-transition: all 500ms ease;  
+      -moz-transition: all 500ms ease;  
+      -ms-transition: all 500ms ease;  
+      -o-transition: all 500ms ease;  
+      transition: all 500ms ease;  
+      @media screen and (max-width: 768px) {  
+           transform: rotate(0deg) !important;  
+      }  
+ }  
+ .flex-about {  
+      opacity: 0;  
+      color: #f1f1f1;  
+      position: relative;  
+      width: 70%;  
+      font-size: 2vw;  
+      padding: 5%;  
+      top: 20%;  
+      border: 2px solid #f1f1f1;  
+      border-radius: 0px;  
+      background-color: #000000;
+      line-height: 1.3;  
+      margin: auto;  
+      text-align: left;  
+      transform: rotate(0deg);  
+      -webkit-transition: all 500ms ease;  
+      -moz-transition: all 500ms ease;  
+      -ms-transition: all 500ms ease;  
+      -o-transition: all 500ms ease;  
+      transition: all 500ms ease;  
+      @media screen and (max-width: 768px) {  
+           padding: 0%;  
+           border: 0px solid #f1f1f1;  
+      }  
+ }  
+ .flex-slide {  
+      -webkit-flex: 1; /* Safari 6.1+ */  
+      -ms-flex: 1; /* IE 10 */    
+      flex: 1;  
+      cursor: pointer;  
+      -webkit-transition: all 500ms ease;  
+      -moz-transition: all 500ms ease;  
+      -ms-transition: all 500ms ease;  
+      -o-transition: all 500ms ease;  
+      transition: all 500ms ease;  
+      @media screen and (max-width: 768px) {  
+           overflow: auto;  
+           overflow-x: hidden;  
+      }  
+ }  
+ .flex-slide p {  
+      @media screen and (max-width: 768px) {  
+           font-size: 2em;  
+      }  
+ }   
+ .flex-slide ul li {  
+      @media screen and (max-width: 768px) {  
+           font-size: 2em;  
+      }  
+ }   
+ .flex-slide:hover {  
+      -webkit-flex-grow: 3;  
+      flex-grow: 3;  
+ }  
+ .home {  
+      
+      background: url(./img/rodrigomg.jpg);  
+      background-size: cover;  
+      background-position: center;  
+      
+        
+      @media screen and (min-width: 768px) {  
+           animation: aboutFlexSlide $defaultSeconds 1;  
+           animation-delay: 0s;  
+      }  
+ }  
+ @keyframes aboutFlexSlide {  
+      0% {  
+           -webkit-flex-grow: 1;  
+           flex-grow: 1;  
+      }  
+      50% {  
+           -webkit-flex-grow: 3;  
+           flex-grow: 3;  
+      }  
+      100% {  
+           -webkit-flex-grow: 1;  
+           flex-grow: 1;  
+      }  
+ }  
+ .flex-title-home {  
+      @media screen and (min-width: 768px) {  
+           transform: rotate(90deg);  
+           top: 15%;  
+           animation: aboutFlexSlide $defaultSeconds 1;  
+           animation-delay: 0s;  
+           
+      }  
+ }  
+ @keyframes homeFlextitle {  
+      0% {  
+           transform: rotate(90deg);  
+           top: 15%;  
+      }  
+      50% {  
+           transform: rotate(0deg);  
+           top: 15%;  
+      }  
+      100% {  
+           transform: rotate(90deg);  
+           top: 15%;  
+      }  
+ }  
+ .flex-about-home {  
+      opacity: 0;  
+      @media screen and (min-width: 768px) {  
+           animation: aboutFlexSlide $defaultSeconds 1;  
+           animation-delay: 0s; 
+            
+      }  
+ }  
+ @keyframes flexAboutHome {  
+      0% {  
+           opacity: 0;  
+      }  
+      50% {  
+           opacity: 1;  
+      }  
+      100% {  
+           opacity: 0;  
+      }  
+    }  
+    .about {  
+        background: url(./img/port.webp);  
+      background-size: cover;  
+      background-position: center;       
+    }  
+    .contact-form {  
+        width: 100%;  
+    }  
+    input {  
+        width: 100%;  
+    }  
+    textarea {  
+        width: 100%;       
+    }  
+    .contact {  
+        background: url(./img/cont.jpg);  
+      background-size: cover;  
+      background-position: center;  
+    }  
+    .work {  
+        background: url(./img/porto.jpg);  
+      background-size: cover;  
+      background-position: center; 
+    }  
+    // Preloader  
+    .spinner {  
+        position: fixed;  
+        top: 0;  
+        left: 0;  
+        background: #222;  
+        height: 100%;  
+        width: 100%;  
+        z-index: 11;  
+        margin-top: 0;  
+        color: #fff;  
+        font-size: 1em;  
+    }  
+    .cube1, .cube2 {  
+       
+    background-color: #fff;  
+    width: 15px;  
+    height: 15px;  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;  
+    animation: sk-cubemove 1.8s infinite ease-in-out;  
+    }  
+    .cube2 {  
+    -webkit-animation-delay: -0.9s;  
+    animation-delay: -0.9s;  
+    }  
+    @-webkit-keyframes sk-cubemove {  
+    25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }  
+    50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }  
+    75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }  
+    100% { -webkit-transform: rotate(-360deg) }  
+    }  
+    @keyframes sk-cubemove {  
+    25% {   
+    transform: translateX(42px) rotate(-90deg) scale(0.5);  
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);  
+    } 50% {   
+    transform: translateX(42px) translateY(42px) rotate(-179deg);  
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);  
+    } 50.1% {   
+    transform: translateX(42px) translateY(42px) rotate(-180deg);  
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);  
+    } 75% {   
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);  
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);  
+    } 100% {   
+    transform: rotate(-360deg);  
+    -webkit-transform: rotate(-360deg);  
+    }  
+    }
+     p, h1, h2, h3, h4, h5, h6, ul, li{
+        font-size: 12px;
+    }
+    a{
+        color: #f1f1f1;
+    }
+   </style>
+  </head>   
+  <body>   
+   <div class="flex-container">  
+     <div class="spinner"><p>  
+       <div class="cube1"></div>  
+       <div class="cube2"></div>  
+       Loading...  
+       </p>  
+     </div>  
+     
+     <div class="flex-slide home">  
+       <div class="flex-title flex-title-home">Sobre</div>  
+       <div class="flex-about flex-about-home"><p>Seja bem-vindo! Aqui você encontra a página inicial</p>
+       <br> 
+            <p><a href="https://www.hostinger.com.br/tutoriais/diferenca-entre-html-e-html5">HTML</a></p>  
+            <p><a href="https://www.totvs.com/blog/developers/o-que-e-css/">CSS</a></p>  
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JAVASCRIPT</a></p>  
+          <br>
+          <P>Logo ao lado, você encontra um pouco sobre o meu trabalho.</P>
+    </div>  
+     </div>  
+     <div class="flex-slide about">  
+       <div class="flex-title">Trabalho</div>  
+       <div class="flex-about"><p>Olá! Me chamo Rodrigo! Tenho 23 anos e busco rumo na área de programação.</p><p>
+        Hoje, com 23 anos, tenho minha própria empresa de desenvolvimento web!
+    </p>
+    <p>vou deixa um link te direcionando ao meu site profissional, espero te agradar.</p>
+    <P>Visite meus projetos.</P>
+         <p><a href="https://rodrigbritto.github.io/Rweb_Designer/">RWEB DESIGNER</a></p>
+                                                                                   
+</div>  
+     </div>  
+     
+     <div class="flex-slide work">  
+       <div class="flex-title">Portfólio</div>  
+       <div class="flex-about"><p>Visite meu <a href="https://rodrigbritto.github.io/Portf-ioBrito/" >Portfólio.</a></p>  
+           
+       </div>  
+     </div>  
+
+     <div class="flex-slide contact">  
+       <div class="flex-title">Contato</div>  
+           <div class="flex-about">  
+            <P>Redes Sociais</P> <br>
+              
+                <p><a href="https://www.facebook.com/rodrigo.junior.376/about">FACEBOOK</a></p>  
+                <p><a href="https://www.instagram.com/akbritto/">INSTAGRAM</a></p>  
+                <p><a href="https://www.tiktok.com/@rweb_designer">TIKTOK</a></p>  
+                <p><a href="https://github.com/rodrigbritto">GITHUB</a></p>
+                <p><a href="https://www.linkedin.com/in/rodrigo-brito-b071a2236/">LINKEDIN</a></p>
+              
+             
+       </div>  
+            
+            
+     </div>  
+   </div> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>  
+   <script src="./js.js"></script>
+  </body>   
+  </html>   
